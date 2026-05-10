@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Owls of Cyprus — A Bestiary of Striving</title>
+<meta name="description" content="A scholarly companion to The Conatus: owl conservation in Cyprus and the Mediterranean — species, programs, and the ethical recognition of another being's striving." />
+
+<!-- Open Graph: makes Facebook / WhatsApp / LinkedIn render a proper card -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Owls of Cyprus — A Bestiary of Striving" />
+<meta property="og:description" content="A scholarly companion to The Conatus — owl conservation in Cyprus and the Mediterranean. The recognition of the other's striving against its violent termination." />
+<meta property="og:url" content="https://safepaws-cy.github.io/safepaws/owls.html" />
+<meta property="og:site_name" content="Safe Paws Cyprus" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #15110d;
+    --ink-deep: #0a0806;
+    --paper: #f0e4ca;
+    --paper-dim: #c9bb9a;
+    --paper-soft: #a89776;
+    --crimson: #8b1e1e;
+    --crimson-deep: #5e1414;
+    --ochre: #b8893a;
+    --olive: #6e7d4a;
+    --gold: #d4a64a;
+    --teal: #3a6b6b;
+    --plum: #5a3a5e;
+    --rule: rgba(212, 166, 74, 0.22);
+    --rule-soft: rgba(240, 228, 202, 0.10);
+    --shadow: 0 18px 60px rgba(0,0,0,0.55);
+    --maxw: 1140px;
+    --serif: "Cormorant Garamond", "EB Garamond", Garamond, serif;
+    --serif-2: "EB Garamond", Garamond, serif;
+    --mono: "JetBrains Mono", ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--serif-2);
+    color: var(--paper);
+    background:
+      radial-gradient(1100px 700px at 80% -10%, rgba(184,137,58,0.10), transparent 60%),
+      radial-gradient(900px 600px at -10% 110%, rgba(139,30,30,0.12), transparent 60%),
+      radial-gradient(60% 60% at 50% 30%, #2a221a 0%, #1a1410 60%, #0a0806 100%);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: 1.6;
+    font-size: 18px;
+  }
+  .container { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+  a { color: var(--gold); text-decoration: none; border-bottom: 1px dotted rgba(212,166,74,0.45); }
+  a:hover { color: #f0c574; border-bottom-color: var(--gold); }
+
+  /* TOPBAR */
+  .topbar {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 22px 0 10px;
+    font-family: var(--mono);
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--paper-soft);
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .topbar a { color: var(--paper-dim); border: none; }
+  .topbar a:hover { color: var(--gold); }
+
+  /* HERO */
+  header.hero { padding: 80px 0 56px; text-align: center; position: relative; }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ochre);
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    margin: 18px 0 14px;
+    color: var(--paper);
+  }
+  h1 em { font-style: italic; color: var(--gold); }
+  .lede {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(18px, 2vw, 24px);
+    color: var(--paper-dim);
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .rule {
+    width: 90px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 28px auto;
+  }
+  .epigraph {
+    max-width: 720px; margin: 18px auto 0;
+    color: var(--paper-soft); font-style: italic;
+    font-size: 17px;
+    border-left: 2px solid var(--rule);
+    padding-left: 18px; text-align: left;
+  }
+  .epigraph cite {
+    display: block; margin-top: 8px;
+    font-family: var(--mono); font-style: normal;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ochre);
+  }
+
+  /* STATS */
+  .stats {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px;
+    margin: 60px 0 0;
+  }
+  .stat {
+    border-top: 1px solid var(--rule);
+    padding-top: 14px;
+  }
+  .stat .n {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 38px; letter-spacing: -0.01em;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .stat .l {
+    font-family: var(--mono);
+    font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--paper-soft);
+    margin-top: 6px;
+  }
+
+  /* SECTION */
+  section { padding: 70px 0; }
+  .section-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 14px;
+  }
+  .section-head h2 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(28px, 4vw, 44px); letter-spacing: -0.01em;
+    margin: 0; color: var(--paper);
+  }
+  .section-head h2 em { font-style: italic; color: var(--gold); }
+  .section-head .stage {
+    font-family: var(--mono);
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ochre);
+  }
+  .sub { color: var(--paper-soft); font-style: italic; margin-top: -10px; margin-bottom: 30px; }
+
+  /* FILTERS */
+  .filter { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 26px; }
+  .chip {
+    appearance: none;
+    background: transparent;
+    color: var(--paper-dim);
+    border: 1px solid var(--rule);
+    padding: 8px 16px;
+    font-family: var(--mono);
+    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+    cursor: pointer;
+    transition: all .25s ease;
+  }
+  .chip:hover { color: var(--paper); border-color: var(--gold); }
+  .chip.active {
+    color: var(--ink-deep);
+    background: var(--gold);
+    border-color: var(--gold);
+  }
+
+  /* CARD GRID */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 22px; }
+  .card {
+    position: relative; perspective: 1500px;
+    height: 360px; cursor: pointer;
+  }
+  .card-inner {
+    position: relative; width: 100%; height: 100%;
+    transition: transform .9s cubic-bezier(.2,.7,.2,1);
+    transform-style: preserve-3d;
+  }
+  .card.flipped .card-inner { transform: rotateY(180deg); }
+  .face {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(240,228,202,0.04), rgba(240,228,202,0.015));
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .front { padding: 26px 22px 18px; }
+  .corner {
+    position: absolute; width: 18px; height: 18px;
+    border: 1px solid var(--gold); opacity: 0.5;
+  }
+  .corner.tl { top: 8px; left: 8px; border-right: none; border-bottom: none; }
+  .corner.tr { top: 8px; right: 8px; border-left: none; border-bottom: none; }
+  .corner.bl { bottom: 8px; left: 8px; border-right: none; border-top: none; }
+  .corner.br { bottom: 8px; right: 8px; border-left: none; border-top: none; }
+
+  .tag {
+    font-family: var(--mono);
+    font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ochre);
+  }
+  .tag .pip {
+    display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+    background: var(--gold); margin-right: 8px; vertical-align: middle;
+  }
+  .tag.endemic .pip { background: var(--crimson); }
+  .tag.med .pip { background: var(--olive); }
+  .tag.threats .pip { background: var(--crimson-deep); }
+
+  .front h3 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: 30px; letter-spacing: -0.01em;
+    margin: 14px 0 4px; color: var(--paper);
+  }
+  .latin {
+    font-family: var(--serif-2); font-style: italic;
+    color: var(--paper-soft); font-size: 15px;
+  }
+  .summary {
+    margin-top: 18px;
+    color: var(--paper-dim);
+    font-size: 16.5px;
+    line-height: 1.5;
+  }
+  .front .footer {
+    margin-top: auto; display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--mono);
+    font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--paper-soft);
+  }
+  .front .footer .flip { color: var(--gold); }
+
+  .back {
+    transform: rotateY(180deg);
+    padding: 24px 22px 18px;
+    overflow-y: auto;
+    background: linear-gradient(180deg, rgba(139,30,30,0.10), rgba(240,228,202,0.02));
+  }
+  .back h4 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: 20px; margin: 0 0 12px; color: var(--gold);
+  }
+  .back ul { margin: 0; padding-left: 18px; color: var(--paper-dim); font-size: 15.5px; }
+  .back ul li { margin: 8px 0; line-height: 1.5; }
+  .back .refs {
+    margin-top: 14px; padding-top: 12px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--mono);
+    font-size: 11px; letter-spacing: 0.04em;
+    color: var(--paper-soft);
+  }
+  .back .refs a { font-family: var(--mono); font-size: 11px; }
+
+  /* OWL SVG GLYPH */
+  .glyph {
+    position: absolute; right: 14px; top: 14px;
+    width: 78px; height: 78px;
+    color: var(--gold);
+    opacity: 0.28;
+    transition: opacity .35s ease, transform .6s ease;
+  }
+  .card:hover .glyph { opacity: 0.5; transform: rotate(-3deg); }
+
+  /* DATA / BARS */
+  .bars { display: grid; gap: 18px; }
+  .bar {
+    border-top: 1px solid var(--rule);
+    padding: 14px 0 0;
+  }
+  .bar .lab {
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-family: var(--serif); font-size: 18px;
+    color: var(--paper);
+  }
+  .bar .lab span:last-child {
+    font-family: var(--mono); font-size: 13px; letter-spacing: 0.05em;
+    color: var(--gold);
+  }
+  .bar .track {
+    margin-top: 10px; height: 6px;
+    background: rgba(240,228,202,0.06);
+  }
+  .bar .fill {
+    height: 100%; width: 0;
+    background: linear-gradient(90deg, var(--gold), var(--crimson));
+    transition: width 1.6s cubic-bezier(.2,.7,.2,1);
+  }
+  .bar.olive .fill { background: linear-gradient(90deg, var(--olive), var(--gold)); }
+
+  /* TIMELINE */
+  .timeline { position: relative; padding-left: 8px; }
+  .timeline::before {
+    content: "";
+    position: absolute; left: 14px; top: 6px; bottom: 6px;
+    width: 1px;
+    background: linear-gradient(180deg, var(--gold), transparent);
+    opacity: 0.5;
+  }
+  .t-item {
+    position: relative;
+    padding: 14px 10px 14px 50px;
+  }
+  .t-item::before {
+    content: "";
+    position: absolute; left: 8px; top: 22px;
+    width: 14px; height: 14px;
+    border: 1px solid var(--gold);
+    background: var(--ink-deep);
+    transform: rotate(45deg);
+  }
+  .t-item .y {
+    font-family: var(--mono);
+    font-size: 12px; letter-spacing: 0.22em;
+    color: var(--gold);
+  }
+  .t-item .e {
+    font-family: var(--serif-2);
+    color: var(--paper-dim); font-size: 17px;
+    margin-top: 4px;
+  }
+
+  /* CLOSING / ETHICAL CONSEQUENCE */
+  .closing {
+    text-align: center;
+    padding: 90px 0 40px;
+    border-top: 1px solid var(--rule);
+  }
+  .closing .roman {
+    font-family: var(--serif); font-style: italic;
+    font-size: 64px; color: var(--crimson);
+    margin: 0;
+  }
+  .closing h2 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(30px, 4vw, 48px);
+    margin: 16px 0 22px;
+    letter-spacing: -0.01em;
+  }
+  .closing p {
+    font-family: var(--serif-2);
+    font-style: italic;
+    color: var(--paper-dim);
+    max-width: 720px; margin: 0 auto 18px;
+    font-size: 19px;
+    line-height: 1.6;
+  }
+  .closing .cite {
+    font-family: var(--mono);
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ochre);
+    margin-top: 28px;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--rule-soft);
+    padding: 40px 0 80px;
+    color: var(--paper-soft);
+    font-family: var(--mono);
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    text-align: center;
+  }
+  footer p { margin: 8px 0; }
+  footer a { color: var(--paper-dim); border: none; }
+  footer a:hover { color: var(--gold); }
+
+  @media (max-width: 720px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .card { height: 400px; }
+    section { padding: 50px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <a href="./">← The Conatus</a>
+    <span>Bestiary · I</span>
+    <span>Safe Paws Cyprus</span>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="eyebrow">A Bestiary of Striving</div>
+    <h1>Owls of <em>Cyprus</em></h1>
+    <p class="lede">Six articulations of one nocturnal life — and the conservation work that recognises it.</p>
+    <div class="rule"></div>
+    <blockquote class="epigraph">
+      Each Cyprus dog, each Egyptian vulture, each cat is a <em>conatus</em>. So too is each owl: a small, particular striving in the night, deserving the protection of its persistence.
+      <cite>— after Stage VII, The Conatus</cite>
+    </blockquote>
+
+    <div class="stats">
+      <div class="stat"><div class="n">1,328</div><div class="l">Barn-owl boxes · Cyprus</div></div>
+      <div class="stat"><div class="n">−58%</div><div class="l">Rodenticide use · Cyprus</div></div>
+      <div class="stat"><div class="n">5,000</div><div class="l">Boxes · Israel</div></div>
+      <div class="stat"><div class="n">10,000+</div><div class="l">UK breeding pairs</div></div>
+    </div>
+  </header>
+
+  <!-- THE BESTIARY -->
+  <section>
+    <div class="section-head">
+      <h2>The <em>Bestiary</em></h2>
+      <span class="stage">Articulations I — VI</span>
+    </div>
+    <p class="sub">Touch any plate to turn it.</p>
+
+    <div class="filter" id="filter">
+      <button class="chip active" data-f="all">All</button>
+      <button class="chip" data-f="cyprus">Cyprus</button>
+      <button class="chip" data-f="med">Mediterranean</button>
+      <button class="chip" data-f="species">Species</button>
+      <button class="chip" data-f="program">Programs</button>
+    </div>
+
+    <div class="grid" id="grid">
+
+      <!-- I — Cyprus Scops Owl -->
+      <article class="card" data-tags="cyprus species">
+        <div class="card-inner">
+          <div class="face front">
+            <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+            <svg class="glyph" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.6">
+              <ellipse cx="50" cy="55" rx="28" ry="32"/>
+              <circle cx="40" cy="48" r="7"/><circle cx="60" cy="48" r="7"/>
+              <circle cx="40" cy="48" r="2.6" fill="currentColor"/><circle cx="60" cy="48" r="2.6" fill="currentColor"/>
+              <path d="M50 55 l-3 6 h6 z" fill="currentColor"/>
+              <path d="M28 30 l8 10 M72 30 l-8 10"/>
+            </svg>
+            <span class="tag endemic"><span class="pip"></span> I · Endemic to Cyprus</span>
+            <h3>The Scops Owl</h3>
+            <div class="latin">Otus cyprius</div>
+            <p class="summary">Recognised as a full species only in the last decade. A double-noted song; darker plumage; partly resident. Its population trend is unknown — its persistence quietly demanding our attention.</p>
+            <div class="footer"><span>The endemic</span><span class="flip">Turn ↻</span></div>
+          </div>
+          <div class="face back">
+            <h4>Of its life</h4>
+            <ul>
+              <li>Readily breeds in artificial nest-boxes (occupancy 5–11%) across forest, ecotone &amp; village.</li>
+              <li>Its diet is principally insects (Orthoptera, Coleoptera), with mice, geckos and the Cyprus spiny mouse adding biomass.</li>
+              <li>First documented bat predation (Pipistrellus) on Cyprus, 2024.</li>
+              <li>Threatened by the felling of old trees and renovation of village houses — its cavities lost.</li>
+            </ul>
+            <div class="refs">Iezekiel 2021 · Kassinis 2024 · Flint 2015</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- II — Cyprus Barn Owl Project -->
+      <article class="card" data-tags="cyprus program">
+        <div class="card-inner">
+          <div class="face front">
+            <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+            <svg class="glyph" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M50 22 c-18 0 -28 14 -28 30 c0 18 12 30 28 30 s28 -12 28 -30 c0 -16 -10 -30 -28 -30 z"/>
+              <path d="M38 50 q12 -16 24 0"/>
+              <circle cx="42" cy="52" r="3" fill="currentColor"/><circle cx="58" cy="52" r="3" fill="currentColor"/>
+              <path d="M50 56 v6"/>
+            </svg>
+            <span class="tag"><span class="pip"></span> II · A Program of Recognition</span>
+            <h3>The Cyprus Barn Owl</h3>
+            <div class="latin">Tyto alba — BirdLife Cyprus &amp; the Game and Fauna Service</div>
+            <p class="summary">A national-scale alliance between farmers and the owl. The recognition of an animal whose striving relieves the field of poison.</p>
+            <div class="footer"><span>The flagship</span><span class="flip">Turn ↻</span></div>
+          </div>
+          <div class="face back">
+            <h4>Outcomes</h4>
+            <ul>
+              <li>≈1,328 nest-boxes installed across the island.</li>
+              <li>−58% rodenticide use (multinational review); −52% since 2021 by BirdLife Cyprus's count.</li>
+              <li>Rodenticides phased out entirely in Paliometocho, Kampia, Kampi tou Farmaka and Mammari.</li>
+              <li>National Action Plan presented to the Minister of Agriculture, June 2020.</li>
+            </ul>
+            <div class="refs">BirdLife Cyprus · Bontzorlos 2024 · Cyprus Mail 2025</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- III — Israel Initiative -->
+      <article class="card" data-tags="med program">
+        <div class="card-inner">
+          <div class="face front">
+            <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+            <svg class="glyph" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M30 40 q20 -22 40 0 v25 q-20 18 -40 0 z"/>
+              <circle cx="42" cy="50" r="5" fill="currentColor"/><circle cx="58" cy="50" r="5" fill="currentColor"/>
+              <path d="M50 58 l-3 5 h6 z" fill="currentColor"/>
+              <path d="M30 40 l-6 -10 M70 40 l6 -10"/>
+            </svg>
+            <span class="tag med"><span class="pip"></span> III · The Origin</span>
+            <h3>The Mediterranean Initiative</h3>
+            <div class="latin">Yossi Leshem · Tel Aviv · Sde Eliyahu</div>
+            <p class="summary">Where this work began, in 1981. A pilot in the Hula Valley grew into a basin-wide practice — owls without borders, recognised in Israel, Jordan, the Palestinian Authority.</p>
+            <div class="footer"><span>The origin</span><span class="flip">Turn ↻</span></div>
+          </div>
+          <div class="face back">
+            <h4>Scale &amp; results</h4>
+            <ul>
+              <li>~5,000 nest-boxes in Israel; ~400 in Jordan; ~100 in the West Bank; ~50 in Morocco.</li>
+              <li>Beit She'an valley: 86.7% of boxes used at least once (5-yr study); 85.2% breeding success.</li>
+              <li>−45% pesticide use attributed to the program.</li>
+              <li>Farmers buy and install boxes themselves — belief enacted in practice.</li>
+            </ul>
+            <div class="refs">Peleg 2018 · Meyrom 2009 · Times of Israel</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- IV — Greece TYTO -->
+      <article class="card" data-tags="med program">
+        <div class="card-inner">
+          <div class="face front">
+            <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+            <svg class="glyph" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.6">
+              <ellipse cx="50" cy="55" rx="26" ry="30"/>
+              <circle cx="42" cy="50" r="6"/><circle cx="58" cy="50" r="6"/>
+              <circle cx="42" cy="50" r="2" fill="currentColor"/><circle cx="58" cy="50" r="2" fill="currentColor"/>
+              <path d="M50 56 v8"/>
+              <path d="M30 35 l4 -10 M70 35 l-4 -10"/>
+            </svg>
+            <span class="tag med"><span class="pip"></span> IV · Across the Aegean</span>
+            <h3>Thessaly's Plains</h3>
+            <div class="latin">TYTO · Tyto alba</div>
+            <p class="summary">Greece's modern echo of the model. From 100 boxes in 2019 to nearly 300 by 2023, set across agricultural plains where mice and barley share a field.</p>
+            <div class="footer"><span>Greece</span><span class="flip">Turn ↻</span></div>
+          </div>
+          <div class="face back">
+            <h4>Progress</h4>
+            <ul>
+              <li>~60% mean occupancy; ~30% successful broods per year.</li>
+              <li>700+ owlets fledged in deployed boxes.</li>
+              <li>Companion projects on Lemnos via MedINA.</li>
+            </ul>
+            <div class="refs">TYTO Project · MedINA</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- V — Spanish Eagle Owl -->
+      <article class="card" data-tags="med species">
+        <div class="card-inner">
+          <div class="face front">
+            <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+            <svg class="glyph" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M22 30 l10 18 M78 30 l-10 18"/>
+              <ellipse cx="50" cy="58" rx="30" ry="32"/>
+              <circle cx="40" cy="52" r="7"/><circle cx="60" cy="52" r="7"/>
+              <circle cx="40" cy="52" r="3" fill="currentColor"/><circle cx="60" cy="52" r="3" fill="currentColor"/>
+              <path d="M50 60 v9"/>
+            </svg>
+            <span class="tag med"><span class="pip"></span> V · The Iberian</span>
+            <h3>The Eagle Owl</h3>
+            <div class="latin">Bubo bubo</div>
+            <p class="summary">Europe's largest. Iberia is its stronghold — recovered from a century of persecution, still falling to electrified pylons and the silence of vanished rabbits.</p>
+            <div class="footer"><span>Spain · Top predator</span><span class="flip">Turn ↻</span></div>
+          </div>
+          <div class="face back">
+            <h4>Conservation</h4>
+            <ul>
+              <li>~2,500–3,000 territories across Spain.</li>
+              <li>Dominant mortality: electrocution + decline of European rabbit (Oryctolagus cuniculus).</li>
+              <li>Endesa and SEO/BirdLife coordinate utility-line and species-level recovery work.</li>
+              <li>Genetics show a 20th-century bottleneck and subsequent expansion.</li>
+            </ul>
+            <div class="refs">Endesa · PLOS ONE 2015</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- VI — Italy Little Owl -->
+      <article class="card" data-tags="med species">
+        <div class="card-inner">
+          <div class="face front">
+            <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+            <svg class="glyph" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.6">
+              <ellipse cx="50" cy="58" rx="22" ry="26"/>
+              <circle cx="44" cy="52" r="5"/><circle cx="56" cy="52" r="5"/>
+              <circle cx="44" cy="52" r="2" fill="currentColor"/><circle cx="56" cy="52" r="2" fill="currentColor"/>
+              <path d="M50 58 v6"/>
+            </svg>
+            <span class="tag med"><span class="pip"></span> VI · The Farmland</span>
+            <h3>The Little Owl</h3>
+            <div class="latin">Athene noctua</div>
+            <p class="summary">A bird of dry-stone walls and old olives. One of the steepest farmland declines in 60 years of European data — its persistence tied to mosaic landscapes.</p>
+            <div class="footer"><span>Italy · Farmland indicator</span><span class="flip">Turn ↻</span></div>
+          </div>
+          <div class="face back">
+            <h4>What works</h4>
+            <ul>
+              <li>Hedgerows, dry-stone walls, traditional rural buildings — the architecture of cavity supply.</li>
+              <li>Nest-boxes proven to boost local populations where natural cavities are scarce.</li>
+              <li>Reproduction tied to landscape heterogeneity.</li>
+            </ul>
+            <div class="refs">Bird Conservation Int. · Cambridge — Little Owl monograph</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- threats -->
+      <article class="card" data-tags="cyprus">
+        <div class="card-inner">
+          <div class="face front">
+            <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+            <svg class="glyph" viewBox="0 0 100 100" fill="none" stroke="#8b1e1e" stroke-width="1.6">
+              <path d="M20 80 L80 20" stroke-dasharray="4 4"/>
+              <path d="M20 20 L80 80" stroke-dasharray="4 4"/>
+              <circle cx="50" cy="50" r="22"/>
+            </svg>
+            <span class="tag threats"><span class="pip"></span> A counter-articulation</span>
+            <h3>The Limestick</h3>
+            <div class="latin">collateral cruelty</div>
+            <p class="summary">In Cyprus, an estimated 620,000 songbirds were illegally killed in autumn 2024 alone. The owl is taken as collateral — a striving caught and stilled.</p>
+            <div class="footer"><span>The pressure</span><span class="flip">Turn ↻</span></div>
+          </div>
+          <div class="face back">
+            <h4>The picture</h4>
+            <ul>
+              <li>Trapping up ~90% on prior years (BirdLife Cyprus surveys, 2024).</li>
+              <li>Barn owls and other raptors regularly trapped on limesticks; documented Larnaca rescues.</li>
+              <li>Enforcement gaps cited as the primary driver of resurgence.</li>
+            </ul>
+            <div class="refs">Cyprus Mail · BirdLife Cyprus — Combating Bird Crime</div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- DATA -->
+  <section>
+    <div class="section-head">
+      <h2>By the <em>Numbers</em></h2>
+      <span class="stage">An accounting</span>
+    </div>
+    <p class="sub">National outcomes attributed to barn-owl nest-box programs.</p>
+
+    <div class="bars" id="bars">
+      <div class="bar olive"><div class="lab"><span>Cyprus — rodenticide reduction</span><span>−58%</span></div><div class="track"><div class="fill" data-pct="58"></div></div></div>
+      <div class="bar olive"><div class="lab"><span>Israel — pesticide reduction</span><span>−45%</span></div><div class="track"><div class="fill" data-pct="45"></div></div></div>
+      <div class="bar"><div class="lab"><span>Cyprus boxes deployed (towards estimated need)</span><span>1,328</span></div><div class="track"><div class="fill" data-pct="88"></div></div></div>
+      <div class="bar"><div class="lab"><span>Greece (Thessaly) box growth · 2019 → 2023</span><span>+190%</span></div><div class="track"><div class="fill" data-pct="76"></div></div></div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section>
+    <div class="section-head">
+      <h2>A <em>Genealogy</em></h2>
+      <span class="stage">Stops along the way</span>
+    </div>
+
+    <div class="timeline">
+      <div class="t-item"><div class="y">1981 — 1983</div><div class="e">Israel pilots barn-owl biocontrol in the Hula Valley, then at Kibbutz Sde Eliyahu (Y. Leshem and partners).</div></div>
+      <div class="t-item"><div class="y">2007</div><div class="e">Beit She'an valley reaches ~300 boxes — &gt;85% occupancy at least once over five years.</div></div>
+      <div class="t-item"><div class="y">2015</div><div class="e">The Cyprus Scops Owl is reclassified as a full species (Flint et al., Zootaxa).</div></div>
+      <div class="t-item"><div class="y">2019</div><div class="e">TYTO launches the Thessaly Barn Owl Project in Greece with 100 boxes.</div></div>
+      <div class="t-item"><div class="y">2020</div><div class="e">Cyprus's National Action Plan for the Barn Owl is presented to the Minister of Agriculture.</div></div>
+      <div class="t-item"><div class="y">2021</div><div class="e">First nest-box study confirms the endemic Cyprus Scops Owl breeds in artificial cavities.</div></div>
+      <div class="t-item"><div class="y">2024</div><div class="e">Multinational review: Israel −45%, Cyprus −58% pesticide use; the model expands to Morocco, Spain, Malaysia.</div></div>
+      <div class="t-item"><div class="y">2025</div><div class="e">Cyprus reports complete rodenticide phase-out in several communities.</div></div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing">
+    <p class="roman">VII</p>
+    <h2>The Ethical Consequence</h2>
+    <p>Each owl is a small striving in the night. The work of <strong>Safe Paws Cyprus</strong> — and of the partners gathered above — is the practical recognition of that fact: the protection of the other's persistence against poison, against limestick, against the loss of the cavity it has always known.</p>
+    <p>The bestiary is not a list of curiosities. It is an accounting of what we are asked to keep alive.</p>
+    <div class="cite">After Stage VII · The Conatus</div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="container">
+    <p><a href="./">← Return to The Conatus</a> &nbsp;·&nbsp; Safe Paws Cyprus &nbsp;·&nbsp; A Bestiary, MMXXVI</p>
+    <p>Compiled from peer-reviewed research (Iezekiel 2021, Kassinis 2024, Flint 2015, Peleg 2018, Meyrom 2009, Bontzorlos 2024) and conservation reporting from BirdLife Cyprus, the Barn Owl Trust, TYTO, Endesa, and MedINA.</p>
+  </div>
+</footer>
+
+<script>
+  // Card flip
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', e => {
+      if (e.target.closest('a')) return;
+      card.classList.toggle('flipped');
+    });
+  });
+
+  // Filter chips
+  const grid = document.getElementById('grid');
+  const chips = document.querySelectorAll('#filter .chip');
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      const f = chip.dataset.f;
+      grid.querySelectorAll('.card').forEach(card => {
+        const tags = (card.dataset.tags || '').split(' ');
+        const show = (f === 'all') || tags.includes(f);
+        card.style.display = show ? '' : 'none';
+        if (!show) card.classList.remove('flipped');
+      });
+    });
+  });
+
+  // Animate bars on scroll
+  const bars = document.querySelectorAll('.fill');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        el.style.width = (el.dataset.pct || 0) + '%';
+        io.unobserve(el);
+      }
+    });
+  }, { threshold: 0.3 });
+  bars.forEach(b => io.observe(b));
+</script>
+
+</body>
+</html>
