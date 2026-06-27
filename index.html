@@ -536,6 +536,18 @@
     text-transform: uppercase;
     opacity: 0.7;
   }
+  footer .coda-link {
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold-faint);
+    letter-spacing: 0.18em;
+    transition: all 0.3s ease;
+  }
+  footer .coda-link:hover {
+    color: var(--paper);
+    border-bottom-color: var(--gold);
+  }
+  footer .footer-credit { margin-top: 1.1rem; }
 </style>
 </head>
 <body>
@@ -897,7 +909,8 @@
     </div>
 
     <footer>
-      Conatus Genealogy · Safe Paws Cyprus
+      <a class="coda-link" href="before-the-gene.html">Coda → Before the Gene, the Will to Live</a>
+      <div class="footer-credit">Conatus Genealogy · Safe Paws Cyprus</div>
     </footer>
   </div>
 
