@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Πριν από το Γονίδιο, η Θέληση για Ζωή · Safe Paws Cyprus</title>
+<meta name="description" content="Ο conatus του Σπινόζα και η βιολογία του Denis Noble — γιατί το ζώο δεν είναι μηχανή. Δίγλωσσο δοκίμιο σε έξι μέρη. Safe Paws Cyprus.">
+<meta property="og:title" content="Πριν από το Γονίδιο, η Θέληση για Ζωή">
+<meta property="og:description" content="Ο conatus του Σπινόζα και η βιολογία του Denis Noble — coda στο 'The Conatus: A Visual Genealogy'.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#15110d;--ink-deep:#0a0806;
+    --paper:#f0e4ca;--paper-dim:#c9bb9a;--paper-faint:rgba(240,228,202,.45);
+    --crimson:#8b1e1e;--crimson-deep:#5e1414;
+    --ochre:#b8893a;--olive:#6e7d4a;--gold:#d4a64a;--gold-faint:rgba(212,166,74,.3);
+    --serif:'EB Garamond','Times New Roman',serif;
+    --display:'Cormorant Garamond','Times New Roman',serif;
+    --mono:'JetBrains Mono',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:
+      radial-gradient(ellipse at 30% 18%, #2a221a 0%, transparent 60%),
+      radial-gradient(ellipse at 72% 82%, #1a1410 0%, transparent 52%),
+      var(--ink-deep);
+    color:var(--paper);font-family:var(--serif);line-height:1.62;min-height:100vh;
+    overflow-x:hidden;
+  }
+  body::before{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.55;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.95 0 0 0 0 0.9 0 0 0 0 0.79 0 0 0 0.18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");}
+  body::after{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(ellipse at center, transparent 52%, rgba(0,0,0,.5) 100%);}
+  .wrap{max-width:760px;margin:0 auto;padding:3rem 1.5rem 4rem;position:relative;z-index:2}
+
+  /* topbar */
+  .topbar{display:flex;align-items:center;gap:.8rem;margin-bottom:3rem;
+    font-family:var(--mono);font-size:.7rem;letter-spacing:.32em;text-transform:uppercase;color:var(--ochre)}
+  .topbar .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold-faint)}
+  .topbar .series-label{color:var(--paper-dim);opacity:.7}
+  .lang{margin-left:auto;display:flex;gap:5px}
+  .lang button{background:transparent;border:1px solid var(--gold-faint);color:var(--paper-dim);font-family:var(--mono);
+    font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:2px;cursor:pointer;transition:.2s}
+  .lang button.active{background:var(--crimson-deep);border-color:var(--gold);color:var(--paper)}
+  .lang button:hover:not(.active){color:var(--paper);border-color:var(--gold)}
+
+  /* TOC / header */
+  .eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.4em;text-transform:uppercase;color:var(--ochre);margin-bottom:1.1rem}
+  h1.title{font-family:var(--display);font-weight:400;font-style:italic;font-size:clamp(2.7rem,6vw,4.6rem);
+    line-height:1.06;letter-spacing:.005em;color:var(--paper)}
+  h1.title em{color:var(--gold);font-style:italic}
+  .standfirst{font-family:var(--display);font-size:1.4rem;font-style:italic;font-weight:300;color:var(--paper-dim);margin-top:1rem;line-height:1.4}
+  .header-rule{width:90px;height:1px;background:linear-gradient(to right,var(--gold),transparent);margin:2rem 0}
+
+  .epigraph{border-top:1px solid var(--gold-faint);border-bottom:1px solid var(--gold-faint);padding:1.3rem 0;margin:0 0 2.3rem;text-align:center}
+  .epigraph .lat{font-family:var(--display);font-style:italic;font-size:1.4rem;color:var(--paper);line-height:1.45}
+  .epigraph .cite{display:block;margin-top:.7rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;color:var(--paper-dim);text-transform:uppercase}
+
+  .toc-intro{font-family:var(--mono);font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--paper-dim);opacity:.8;margin-bottom:1.3rem}
+  .toc{list-style:none}
+  .toc li{margin:0 0 .8rem}
+  .toc button{width:100%;text-align:left;background:rgba(21,17,13,.55);border:1px solid var(--gold-faint);
+    padding:1.1rem 1.3rem;cursor:pointer;color:var(--paper);font-family:var(--display);font-size:1.4rem;
+    display:flex;align-items:baseline;gap:1rem;transition:.22s}
+  .toc button:hover{border-color:var(--gold);transform:translateX(4px);background:rgba(94,20,20,.25)}
+  .toc button .rn{font-family:var(--display);font-style:italic;font-size:1.5rem;color:var(--crimson);min-width:2.4rem}
+  .toc button .t{flex:1}
+  .toc button .arr{color:var(--ochre);font-family:var(--mono)}
+
+  /* section pages */
+  .part-label{font-family:var(--mono);font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;color:var(--ochre);margin-bottom:.5rem}
+  .roman{font-family:var(--display);font-style:italic;font-weight:500;font-size:5rem;line-height:.9;color:var(--crimson);
+    text-shadow:0 2px 12px rgba(139,30,30,.4);margin-bottom:.6rem}
+  h2.sec{font-family:var(--display);font-weight:500;font-size:clamp(2rem,4.4vw,2.9rem);line-height:1.12;color:var(--paper);margin-bottom:1.6rem}
+  p{font-size:1.28rem;line-height:1.72;color:var(--paper-dim);margin-bottom:1.3rem}
+  p.lead::first-letter{float:left;font-family:var(--display);font-size:4.6rem;line-height:.78;padding:.4rem .6rem 0 0;color:var(--gold);font-weight:600;font-style:italic}
+  strong{color:var(--paper);font-weight:500}
+  em{color:var(--gold);font-style:italic}
+  a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-faint)}
+  a:hover{border-bottom-color:var(--gold)}
+
+  .concept{font-family:var(--display);font-style:italic;font-size:1.5rem;color:var(--gold);line-height:1.4;
+    border-left:2px solid var(--ochre);padding-left:1.3rem;margin:1.8rem 0}
+  .pull{font-family:var(--display);font-style:italic;font-size:1.7rem;line-height:1.4;color:var(--paper);
+    border-left:2px solid var(--crimson);padding-left:1.4rem;margin:2rem 0;position:relative}
+  .pull::before{content:'\201C';position:absolute;left:-.1rem;top:-1.1rem;color:var(--crimson);font-family:var(--display);font-size:2.6rem;opacity:.5}
+
+  .close{margin-top:.4rem;padding:1.7rem 1.7rem 1.5rem;border:1px solid var(--gold-faint);background:rgba(21,17,13,.5)}
+  .close p{font-size:1.3rem;color:var(--paper);margin-bottom:0;line-height:1.66}
+  .close .sign{display:block;margin-top:1.1rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ochre)}
+
+  .refs{margin-top:2rem;padding-top:1.4rem;border-top:1px solid var(--gold-faint)}
+  .refs h3{font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--paper-dim);margin-bottom:.9rem}
+  .refs ol{list-style:none;counter-reset:r}
+  .refs li{counter-increment:r;position:relative;padding-left:1.7rem;margin-bottom:.6rem;font-family:var(--mono);font-size:.82rem;line-height:1.55;color:var(--paper-dim)}
+  .refs li::before{content:counter(r);position:absolute;left:0;top:0;color:var(--gold);font-size:.72rem}
+  .refs a{color:var(--paper)}
+
+  .pagenav{display:flex;align-items:center;gap:.7rem;margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid var(--gold-faint)}
+  .pagenav button{background:transparent;border:1px solid var(--gold-faint);color:var(--paper);font-family:var(--display);
+    font-style:italic;font-size:1.1rem;padding:.6rem 1.2rem;cursor:pointer;transition:.2s;letter-spacing:.02em}
+  .pagenav button:hover{background:var(--crimson-deep);border-color:var(--gold)}
+  .pagenav .spacer{flex:1}
+  .pagenav .toc-link{font-family:var(--mono);font-style:normal;font-size:.85rem;color:var(--paper-dim)}
+
+  /* persistent SERIES rail — connects every page to the previous posts */
+  .series{margin-top:3rem;padding-top:1.7rem;border-top:1px solid var(--gold-faint)}
+  .series h4{font-family:var(--mono);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ochre);margin-bottom:1.1rem;text-align:center}
+  .series-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
+  .series-card{display:block;border:1px solid var(--gold-faint);padding:1rem 1rem;background:rgba(21,17,13,.5);transition:.2s}
+  .series-card:hover{border-color:var(--gold);background:rgba(94,20,20,.22);transform:translateY(-2px)}
+  .series-card .n{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;color:var(--ochre);text-transform:uppercase}
+  .series-card .ttl{font-family:var(--display);font-size:1.12rem;color:var(--paper);line-height:1.18;margin-top:.4rem}
+  .series-card .sub{font-family:var(--mono);font-size:.62rem;color:var(--paper-dim);opacity:.75;margin-top:.45rem;letter-spacing:.04em}
+  @media(max-width:640px){.series-grid{grid-template-columns:1fr}}
+
+  footer{margin-top:2.4rem;padding-top:1.5rem;border-top:1px solid var(--gold-faint);text-align:center;
+    font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--paper-dim);opacity:.75}
+
+  .langblock{display:none}.langblock.on{display:block}
+  .view{display:none}.view.on{display:block;animation:fade .5s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  @media(max-width:560px){.wrap{padding:2rem 1.1rem 3rem}p{font-size:1.16rem}.roman{font-size:4rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <span class="dot"></span> Safe Paws Cyprus <span class="series-label">· Δοκίμια</span>
+    <span class="lang">
+      <button id="b-el" class="active" onclick="setLang('el')">ΕΛ</button>
+      <button id="b-en" onclick="setLang('en')">EN</button>
+    </span>
+  </div>
+
+  <!-- ================= GREEK ================= -->
+  <div class="langblock on" data-lang="el">
+    <section class="view on" data-view="toc">
+      <p class="eyebrow">Coda · The Conatus</p>
+      <h1 class="title">Πριν από το Γονίδιο,<br>η <em>Θέληση</em> για Ζωή</h1>
+      <p class="standfirst">Ο conatus του Σπινόζα και η βιολογία του Denis Noble — ή γιατί το ζώο δεν είναι μηχανή.</p>
+      <div class="header-rule"></div>
+      <div class="epigraph">
+        <span class="lat">Unaquaeque res, quantum in se est, in suo esse perseverare conatur.</span>
+        <span class="cite">Σπινόζα, Ηθική ΙΙΙ, Πρότ. 6 — «Κάθε πράγμα προσπαθεί να επιμένει στο είναι του.»</span>
+      </div>
+      <p class="toc-intro">Ένα δοκίμιο σε έξι μέρη</p>
+      <ul class="toc">
+        <li><button onclick="go('el','0')"><span class="rn">I</span><span class="t">Μια δεύτερη απορία</span><span class="arr">→</span></button></li>
+        <li><button onclick="go('el','1')"><span class="rn">II</span><span class="t">Ο conatus</span><span class="arr">→</span></button></li>
+        <li><button onclick="go('el','2')"><span class="rn">III</span><span class="t">Η εικόνα της μηχανής</span><span class="arr">→</span></button></li>
+        <li><button onclick="go('el','3')"><span class="rn">IV</span><span class="t">Ο Noble και η βιολογική σχετικότητα</span><span class="arr">→</span></button></li>
+        <li><button onclick="go('el','4')"><span class="rn">V</span><span class="t">Ο conatus, με σάρκα φυσιολογίας</span><span class="arr">→</span></button></li>
+        <li><button onclick="go('el','5')"><span class="rn">VI</span><span class="t">Γιατί μας αφορά</span><span class="arr">→</span></button></li>
+      </ul>
+    </section>
+
+    <section class="view" data-view="0">
+      <p class="part-label">Μέρος Ι · VI</p><div class="roman">I</div>
+      <h2 class="sec">Μια δεύτερη απορία</h2>
+      <p class="lead">Σε ένα προηγούμενο κείμενο αυτής της σειράς υποστηρίξαμε ότι το ζώο δεν είναι «φτωχό σε κόσμο»· ότι, πριν από κάθε λέξη, μετέχει σ' έναν κοινό κόσμο προσοχής και σκοπών. Έμεινε όμως μια δεύτερη ένσταση, πιο επίμονη — αυτή που δεν έρχεται από τη φιλοσοφία της γλώσσας, αλλά από τη βιολογία.</p>
+      <p>Ακόμη κι αν το ζώο έχει κόσμο, δεν παύει —λένε— να είναι μια <em>μηχανή</em>: ένα όχημα που το οδηγούν τα γονίδιά του, ένα «βαρύ ρομπότ» στην υπηρεσία εγωιστικών μορίων. Η ζωή του, τάχα, είναι ένα πρόγραμμα γραμμένο στο DNA, κι ό,τι μοιάζει με βούληση είναι μια χρήσιμη ψευδαίσθηση από πάνω. Σ' αυτή την ένσταση θέλουμε να απαντήσουμε εδώ — με δύο συμμάχους τριών αιώνων απόσταση μεταξύ τους: τον Σπινόζα και τον φυσιολόγο Denis Noble.</p>
+      <nav class="pagenav"><button class="toc-link" onclick="go('el','toc')">☰ Περιεχόμενα</button><span class="spacer"></span><button onclick="go('el','1')">Ο conatus →</button></nav>
+    </section>
+
+    <section class="view" data-view="1">
+      <p class="part-label">Μέρος ΙΙ · VI</p><div class="roman">II</div>
+      <h2 class="sec">Ο conatus</h2>
+      <p>Ο Σπινόζα του έδωσε όνομα ήδη το 1677. Στο τρίτο μέρος της Ηθικής γράφει ότι κάθε πράγμα «προσπαθεί, όσο περνάει από το χέρι του, να επιμένει στο είναι του» — και, στην επόμενη πρόταση, ότι αυτή η προσπάθεια <strong>δεν είναι παρά η ίδια η ουσία του πράγματος</strong>.</p>
+      <p>Ας προσέξουμε το βάρος αυτής της κουβέντας: η ορμή για ζωή δεν είναι κάτι <em>πρόσθετο</em> πάνω στο ζωντανό ον — είναι το ίδιο του το είναι. Δεν υπάρχει πρώτα ένα «μηχάνημα» και ύστερα, προαιρετικά, μια θέληση να ζήσει. Το ζωντανό <em>είναι</em> αυτή η θέληση, σε δράση.</p>
+      <div class="pull">Δεν υπάρχει πρώτα μια μηχανή και ύστερα μια θέληση να ζήσει. Το ζωντανό είναι αυτή η θέληση, σε δράση.</div>
+      <nav class="pagenav"><button onclick="go('el','0')">← Μια δεύτερη απορία</button><span class="spacer"></span><button class="toc-link" onclick="go('el','toc')">☰</button><span class="spacer"></span><button onclick="go('el','2')">Η μηχανή →</button></nav>
+    </section>
+
+    <section class="view" data-view="2">
+      <p class="part-label">Μέρος ΙΙΙ · VI</p><div class="roman">III</div>
+      <h2 class="sec">Η εικόνα της μηχανής</h2>
+      <p>Απέναντι στον Σπινόζα στεκόταν πάντα μια άλλη παράδοση. Ο Καρτέσιος είχε φανταστεί το ζώο ως <em>bête-machine</em> — αυτόματο χωρίς ψυχή, ρολόι από σάρκα. Στον εικοστό αιώνα η εικόνα ξαναγεννήθηκε σε γενετική γλώσσα: το γονιδίωμα ως «πρόγραμμα», ως «βιβλίο της ζωής», ως σχέδιο που, αν το διαβάσεις, σου δίνει ολόκληρο το ζώο· κι ο οργανισμός ως απλό «όχημα» που τα γονίδια κατασκευάζουν για να διαιωνιστούν. Είναι μια ισχυρή, καθαρή, παρήγορη εικόνα. Είναι και λάθος.</p>
+      <nav class="pagenav"><button onclick="go('el','1')">← Ο conatus</button><span class="spacer"></span><button class="toc-link" onclick="go('el','toc')">☰</button><span class="spacer"></span><button onclick="go('el','3')">Ο Noble →</button></nav>
+    </section>
+
+    <section class="view" data-view="3">
+      <p class="part-label">Μέρος ΙV · VI</p><div class="roman">IV</div>
+      <h2 class="sec">Ο Noble και η βιολογική σχετικότητα</h2>
+      <p>Ο Denis Noble — ο άνθρωπος που το 1960 έφτιαξε το πρώτο μαθηματικό μοντέλο του καρδιακού παλμού — αφιέρωσε τη ζωή του στο να δείξει γιατί. Η αρχή του, η «βιολογική σχετικότητα», λέει κάτι απλό κι ανατρεπτικό: <strong>δεν υπάρχει προνομιακό επίπεδο αιτιότητας</strong> στα ζωντανά συστήματα. Όπως η φυσική απαλλάχθηκε από το προνομιακό κέντρο και την απόλυτη ταχύτητα, έτσι κι η βιολογία πρέπει να παραιτηθεί από την ιδέα ότι το γονίδιο είναι το «θεμέλιο» απ' όπου ορίζονται όλα τ' άλλα. Το γονιδίωμα, λέει ο Noble, δεν είναι πρόγραμμα — είναι μια <em>βάση δεδομένων</em>, μια «μνήμη ανάγνωσης–εγγραφής» που το κύτταρο διαβάζει, ρυθμίζει, και διορθώνει. Το DNA «δεν κάνει απολύτως τίποτα» μέχρι να το ενεργοποιήσει το κύτταρο. Το ίδιο γονιδίωμα φτιάχνει διακόσιους διαφορετικούς τύπους κυττάρων· η παρτιτούρα δεν είναι ο μουσικός.</p>
+      <p>Το πιο εύγλωττο ίσως επιχείρημα βρίσκεται στην ίδια την καρδιά. Στο μοντέλο του φλεβόκομβου, ο βηματοδότης χτυπά κανονικά — ώσπου, με έναν εικονικό «voltage clamp», κόβει κανείς τον <em>καθοδικό</em> κρίκο: την επιρροή του δυναμικού της μεμβράνης πάνω στα κανάλια ιόντων. Αν υπήρχε κρυμμένο «πρόγραμμα» στις πρωτεΐνες, ο ρυθμός θα συνεχιζόταν. Δεν συνεχίζεται. Όλες οι ταλαντώσεις σβήνουν. Ο καρδιακός ρυθμός <em>δεν είναι</em> γραμμένος στα γονίδια ούτε στις πρωτεΐνες· είναι ιδιότητα του <strong>ολόκληρου</strong> — του κυττάρου, των μεμβρανών του, των ορίων του. «Μεγάλο μέρος της λογικής της ζωής», γράφει, «βρίσκεται στις λεπτές, λιπαρές της μεμβράνες.»</p>
+      <div class="pull">Η παρτιτούρα δεν είναι ο μουσικός. Το γονιδίωμα δίνει τις νότες· το ζωντανό ζώο παίζει.</div>
+      <nav class="pagenav"><button onclick="go('el','2')">← Η μηχανή</button><span class="spacer"></span><button class="toc-link" onclick="go('el','toc')">☰</button><span class="spacer"></span><button onclick="go('el','4')">Φυσιολογία →</button></nav>
+    </section>
+
+    <section class="view" data-view="4">
+      <p class="part-label">Μέρος V · VI</p><div class="roman">V</div>
+      <h2 class="sec">Ο conatus, με σάρκα φυσιολογίας</h2>
+      <p>Εδώ οι δύο σύμμαχοι συναντιούνται. Ο Noble δείχνει ότι κάθε ανώτερο επίπεδο <em>θέτει τις οριακές συνθήκες</em> μέσα στις οποίες λειτουργούν τα κατώτερα — κι αυτές οι συνθήκες είναι εξίσου «αιτία» του αποτελέσματος όσο και οι ίδιοι οι μηχανισμοί. Τι άλλο είναι όμως ο <em>conatus</em>, στην πράξη, από ένα ον που συντηρεί αδιάκοπα τις ίδιες τις συνθήκες της ύπαρξής του; Η ομοιόσταση — από τον Claude Bernard ως τον Walter Cannon, τους προγόνους που ο ίδιος ο Noble επικαλείται — <strong>είναι ο conatus γραμμένος στη γλώσσα της φυσιολογίας</strong>: το ζωντανό κρατά ενεργά τον εαυτό του εντός των ορίων που το κρατούν εαυτό.</p>
+      <p>Και κάτι ακόμη. Ο Noble, με τον Raymond Noble, υποστηρίζει ότι οι οργανισμοί δεν υφίστανται απλώς την τύχη — την <em>αξιοποιούν</em>· «δαμάζουν τη στοχαστικότητα», παράγοντας πολλές δυνατές απαντήσεις σε μια πρόκληση και επιλέγοντας εκείνη που ταιριάζει. Αυτό είναι η θέληση-για-ύπαρξη όχι ως άκαμπτο ρολόι, αλλά ως δημιουργική αυτοσυντήρηση: απρόβλεπτη εκ των προτέρων, κατανοητή εκ των υστέρων. Είναι ακριβώς η ιδέα που ο Σπινόζα χρειαζόταν και δεν μπορούσε ακόμη να ονοματίσει μηχανιστικά.</p>
+      <nav class="pagenav"><button onclick="go('el','3')">← Ο Noble</button><span class="spacer"></span><button class="toc-link" onclick="go('el','toc')">☰</button><span class="spacer"></span><button onclick="go('el','5')">Γιατί μας αφορά →</button></nav>
+    </section>
+
+    <section class="view" data-view="5">
+      <p class="part-label">Μέρος VI · VI</p><div class="roman">VI</div>
+      <h2 class="sec">Γιατί μας αφορά</h2>
+      <div class="close">
+        <p>Να γιατί, για εμάς, αυτή η σελίδα δεν είναι ποτέ μόνο συναγερμοί και ειδήσεις. Όταν ένα τέτοιο πλάσμα δηλητηριάζεται, δεν χαλά μια μηχανή και δεν σβήνει ένα ανόητο αυτόματο. <strong>Σβήνει μια αγωνιώδης προσπάθεια επιβίωσης</strong> — μια μικρή, πεισματική ορμή να επιμείνει στο είναι, ενσωματωμένη σ' ολόκληρο το ζώο, που κάποτε στράφηκε μαζί μας προς τα ίδια πράγματα. Ο Σπινόζα το ονόμασε conatus. Ο Noble έδειξε ότι δεν είναι μεταφορά: η ζωή είναι δράση, όχι μηχανισμός. Κάθε ζώο που σώζουμε είναι μια απάντηση σ' αυτή την προσπάθεια.</p>
+        <span class="sign">Εκείνα επιμένουν. Εμείς απαντάμε. 🐾</span>
+      </div>
+      <div class="refs">
+        <h3>Πηγές</h3>
+        <ol>
+          <li>Σπινόζα, Ηθική (1677), Μέρος ΙΙΙ, Προτάσεις 6–7.</li>
+          <li>D. Noble, «A theory of biological relativity: no privileged level of causation», Interface Focus 2 (2012): 55–64. <a href="https://doi.org/10.1098/rsfs.2011.0067">doi:10.1098/rsfs.2011.0067</a></li>
+          <li>D. Noble, The Music of Life (Oxford University Press, 2006).</li>
+          <li>D. Noble, «The cardiac pacemakers: a paradigm of robustness in evolutionary biology», J. Physiol. (2025). <a href="https://doi.org/10.1113/JP287139">doi:10.1113/JP287139</a></li>
+          <li>R. Noble &amp; D. Noble, «Harnessing stochasticity», Chaos 28 (2018): 106309. <a href="https://doi.org/10.1063/1.5039668">doi:10.1063/1.5039668</a></li>
+        </ol>
+      </div>
+      <nav class="pagenav"><button onclick="go('el','4')">← Φυσιολογία</button><span class="spacer"></span><button class="toc-link" onclick="go('el','toc')">↺ Από την αρχή</button></nav>
+    </section>
+  </div>
+
+  <!-- ================= ENGLISH ================= -->
+  <div class="langblock" data-lang="en">
+    <section class="view on" data-view="toc">
+      <p class="eyebrow">Coda · The Conatus</p>
+      <h1 class="title">Before the Gene,<br>the <em>Will</em> to Live</h1>
+      <p class="standfirst">Spinoza's conatus and the biology of Denis Noble — or why the animal is not a machine.</p>
+      <div class="header-rule"></div>
+      <div class="epigraph">
+        <span class="lat">Unaquaeque res, quantum in se est, in suo esse perseverare conatur.</span>
+        <span class="cite">Spinoza, Ethics III, Prop. 6 — “Each thing strives to persevere in its being.”</span>
+      </div>
+      <p class="toc-intro">An essay in six parts</p>
+      <ul class="toc">
+        <li><button onclick="go('en','0')"><span class="rn">I</span><span class="t">A second objection</span><span class="arr">→</span></button></li>
+        <li><button onclick="go('en','1')"><span class="rn">II</span><span class="t">Conatus</span><span class="arr">→</span></button></li>
+        <li><button onclick="go('en','2')"><span class="rn">III</span><span class="t">The picture of the machine</span><span class="arr">→</span></button></li>
+        <li><button onclick="go('en','3')"><span class="rn">IV</span><span class="t">Noble and biological relativity</span><span class="arr">→</span></button></li>
+        <li><button onclick="go('en','4')"><span class="rn">V</span><span class="t">Conatus, given physiological flesh</span><span class="arr">→</span></button></li>
+        <li><button onclick="go('en','5')"><span class="rn">VI</span><span class="t">Why it concerns us</span><span class="arr">→</span></button></li>
+      </ul>
+    </section>
+
+    <section class="view" data-view="0">
+      <p class="part-label">Part I · VI</p><div class="roman">I</div>
+      <h2 class="sec">A second objection</h2>
+      <p class="lead">In an earlier essay in this series we argued that the animal is not “poor in world” — that, before any word, it shares in a common world of attention and purposes. But a second objection remained, more stubborn — one that comes not from the philosophy of language, but from biology.</p>
+      <p>Even if the animal has a world, it is still — they say — a <em>machine</em>: a vehicle driven by its genes, a “lumbering robot” in the service of selfish molecules. Its life, supposedly, is a program written in DNA, and whatever looks like will is a useful illusion laid over the top. It is this objection we want to answer here — with two allies three centuries apart: Spinoza and the physiologist Denis Noble.</p>
+      <nav class="pagenav"><button class="toc-link" onclick="go('en','toc')">☰ Contents</button><span class="spacer"></span><button onclick="go('en','1')">Conatus →</button></nav>
+    </section>
+
+    <section class="view" data-view="1">
+      <p class="part-label">Part II · VI</p><div class="roman">II</div>
+      <h2 class="sec">Conatus</h2>
+      <p>Spinoza named it as early as 1677. In Part III of the Ethics he writes that each thing “strives, as far as it is able, to persevere in its being” — and, in the very next proposition, that this striving <strong>is nothing but the actual essence of the thing itself</strong>.</p>
+      <p>Let us weigh that carefully: the drive to live is not something <em>added</em> on top of a living being — it is its very being. There is no machine first and then, optionally, a will to live. The living thing <em>is</em> that striving, in act.</p>
+      <div class="pull">There is no machine first and a will to live after. The living thing is that striving, in act.</div>
+      <nav class="pagenav"><button onclick="go('en','0')">← A second objection</button><span class="spacer"></span><button class="toc-link" onclick="go('en','toc')">☰</button><span class="spacer"></span><button onclick="go('en','2')">The machine →</button></nav>
+    </section>
+
+    <section class="view" data-view="2">
+      <p class="part-label">Part III · VI</p><div class="roman">III</div>
+      <h2 class="sec">The picture of the machine</h2>
+      <p>Facing Spinoza there has always stood another tradition. Descartes imagined the animal as <em>bête-machine</em> — a soulless automaton, a clock made of flesh. In the twentieth century the picture was reborn in genetic language: the genome as “program,” as the “book of life,” as a blueprint that, read correctly, would yield the whole animal — and the organism as a mere “vehicle” built by genes to perpetuate themselves. It is a powerful, clean, comforting picture. It is also wrong.</p>
+      <nav class="pagenav"><button onclick="go('en','1')">← Conatus</button><span class="spacer"></span><button class="toc-link" onclick="go('en','toc')">☰</button><span class="spacer"></span><button onclick="go('en','3')">Noble →</button></nav>
+    </section>
+
+    <section class="view" data-view="3">
+      <p class="part-label">Part IV · VI</p><div class="roman">IV</div>
+      <h2 class="sec">Noble and biological relativity</h2>
+      <p>Denis Noble — the man who in 1960 built the first mathematical model of the heartbeat — spent his life showing why. His principle, “biological relativity,” says something simple and subversive: <strong>there is no privileged level of causation</strong> in living systems. Just as physics gave up the privileged centre and absolute velocity, so biology must give up the idea that the gene is the “foundation” from which all else is fixed. The genome, Noble argues, is not a program but a <em>database</em> — a “read–write memory” the cell reads, regulates and repairs. DNA “does absolutely nothing” until the cell activates it. The same genome builds two hundred different cell types; the sheet music is not the musician.</p>
+      <p>Perhaps the most eloquent argument is in the heart itself. In the sinus-node model the pacemaker beats normally — until, with a virtual “voltage clamp,” one severs the <em>downward</em> link: the influence of the membrane potential on the ion channels. If there were a hidden “program” in the proteins, the rhythm would continue. It does not. All oscillation ceases. Cardiac rhythm is <em>not</em> written in the genes or the proteins; it is a property of the <strong>whole</strong> — the cell, its membranes, its boundaries. “Much of the logic of life,” he writes, “lies in its delicate oily membranes.”</p>
+      <div class="pull">The sheet music is not the musician. The genome supplies the notes; the living animal plays.</div>
+      <nav class="pagenav"><button onclick="go('en','2')">← The machine</button><span class="spacer"></span><button class="toc-link" onclick="go('en','toc')">☰</button><span class="spacer"></span><button onclick="go('en','4')">Physiology →</button></nav>
+    </section>
+
+    <section class="view" data-view="4">
+      <p class="part-label">Part V · VI</p><div class="roman">V</div>
+      <h2 class="sec">Conatus, given physiological flesh</h2>
+      <p>Here the two allies meet. Noble shows that each higher level <em>sets the boundary conditions</em> within which the lower levels operate — and those conditions are as much a “cause” of the outcome as the mechanisms themselves. But what is <em>conatus</em>, in practice, except a being that ceaselessly maintains the very conditions of its own existence? Homeostasis — from Claude Bernard to Walter Cannon, the ancestors Noble himself invokes — <strong>is conatus written in the language of physiology</strong>: the living thing actively holding itself within the bounds that keep it itself.</p>
+      <p>And one thing more. Noble, with Raymond Noble, argues that organisms do not merely suffer chance — they <em>harness</em> it; they “harness stochasticity,” generating many possible responses to a challenge and selecting the one that fits. This is the will-to-exist not as rigid clockwork but as creative self-maintenance: unpredictable in prospect, intelligible in hindsight. It is precisely the idea Spinoza needed and could not yet name mechanistically.</p>
+      <nav class="pagenav"><button onclick="go('en','3')">← Noble</button><span class="spacer"></span><button class="toc-link" onclick="go('en','toc')">☰</button><span class="spacer"></span><button onclick="go('en','5')">Why it concerns us →</button></nav>
+    </section>
+
+    <section class="view" data-view="5">
+      <p class="part-label">Part VI · VI</p><div class="roman">VI</div>
+      <h2 class="sec">Why it concerns us</h2>
+      <div class="close">
+        <p>That is why, for us, this page is never only alerts and news. When such a creature is poisoned, no machine breaks and no mindless automaton goes dark. <strong>An agonised struggle to survive is extinguished</strong> — a small, stubborn drive to persevere in being, integrated in the whole animal, that once turned with us toward the same things. Spinoza called it conatus. Noble showed it is no metaphor: life is act, not mechanism. Every animal we rescue is an answer to that striving.</p>
+        <span class="sign">They persevere. We answer. 🐾</span>
+      </div>
+      <div class="refs">
+        <h3>References</h3>
+        <ol>
+          <li>Spinoza, Ethics (1677), Part III, Propositions 6–7.</li>
+          <li>D. Noble, “A theory of biological relativity: no privileged level of causation,” Interface Focus 2 (2012): 55–64. <a href="https://doi.org/10.1098/rsfs.2011.0067">doi:10.1098/rsfs.2011.0067</a></li>
+          <li>D. Noble, The Music of Life (Oxford University Press, 2006).</li>
+          <li>D. Noble, “The cardiac pacemakers: a paradigm of robustness in evolutionary biology,” J. Physiol. (2025). <a href="https://doi.org/10.1113/JP287139">doi:10.1113/JP287139</a></li>
+          <li>R. Noble &amp; D. Noble, “Harnessing stochasticity,” Chaos 28 (2018): 106309. <a href="https://doi.org/10.1063/1.5039668">doi:10.1063/1.5039668</a></li>
+        </ol>
+      </div>
+      <nav class="pagenav"><button onclick="go('en','4')">← Physiology</button><span class="spacer"></span><button class="toc-link" onclick="go('en','toc')">↺ Start over</button></nav>
+    </section>
+  </div>
+
+  <!-- ===== PERSISTENT SERIES RAIL (connects every page to the previous posts) ===== -->
+  <div class="series">
+    <h4>Η Σειρά · The Series</h4>
+    <div class="series-grid">
+      <a class="series-card" href="https://safepaws-cy.github.io/safepaws/">
+        <div class="n">I · Genealogy</div>
+        <div class="ttl">The Conatus: A Visual Genealogy</div>
+        <div class="sub">Spinoza → Friston → Recognition</div>
+      </a>
+      <a class="series-card" href="https://safepaws-cy.github.io/seferis-cats/">
+        <div class="n">II · Ποίηση</div>
+        <div class="ttl">Οι γάτες τ' Αϊ-Νικόλα</div>
+        <div class="sub">Σεφέρης · 14 κάρτες</div>
+      </a>
+      <a class="series-card" href="https://safepaws-cy.github.io/soft-pawed-reckoning/">
+        <div class="n">III · Comic</div>
+        <div class="ttl">The Soft-Pawed Reckoning</div>
+        <div class="sub">In the manner of Poe</div>
+      </a>
+    </div>
+  </div>
+
+  <footer>Safe Paws Cyprus · safepawscyprus@gmail.com</footer>
+</div>
+
+<script>
+  var state={lang:'el',view:'toc'};
+  function render(){
+    document.querySelectorAll('.langblock').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-lang')===state.lang)});
+    var a=document.querySelector('.langblock[data-lang="'+state.lang+'"]');
+    a.querySelectorAll('.view').forEach(function(v){v.classList.toggle('on',v.getAttribute('data-view')===state.view)});
+    document.getElementById('b-el').classList.toggle('active',state.lang==='el');
+    document.getElementById('b-en').classList.toggle('active',state.lang==='en');
+    document.documentElement.lang=state.lang;
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  function go(lang,view){state.lang=lang;state.view=view;render();}
+  function setLang(l){state.lang=l;render();}
+</script>
+</body>
+</html>
